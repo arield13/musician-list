@@ -1,13 +1,237 @@
 body {
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 16px;
+}
+/* Styles for the left button */
+.left-btn {
+    background-color: white;
+    color: #fff;
+    cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles for the right button */
+.right-btn {
+    border: none;
+    background-color: white;
+    color: #fff;
+    cursor: pointer;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Styles for the main menu */
+.main-menu {
+    left: 16px;
+    right: 16px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #c4c4c4;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%; /* Adjust width as needed */
+}
+
+.left-column {
+  background-color: #EAEAEA;
+  flex: 1;
+  padding: 32px;
+  margin-right: 16px;
+  border-radius: 10px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+.artist-box {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+.artist-box.selected {
+  background-color: #DCF3E7; /* Green */
+}
+.right-column {
+  flex: 2;
+  background-color: #EAEAEA;
+  padding: 32px 16px 16px 16px;
+  border-radius: 10px;
+}
+.artist-details {
+  /*display: none;*/
+}
+.lyric-details,
+.author-details {
+    margin-top: 16px;
+    background-color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.artist-menu {
+
+}
+.button {
+    width: 32px;
+    height: 27px;
+    background-color: white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 6px;
+    float: left;
+}
+
+.icon-menu {
+  width: 48px;
+}
+
+/* Style for the modal overlay and modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+}
+
+.artist-buttons {
+  text-align: center;
+}
+
+.button-general {
+  background-color: white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+} 
+
+.button-submit {
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+label.label-title {
+  width: 120px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 7px;
+}
+
+label.label-form-title {
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.form-songs input{
+  width: 300px;
+}
+
+.form-songs textarea{
+  width: 300px;
+  height: 100px;
+}
+
+.artist-label {
+  position: absolute;
+  margin-left: 50px;
+}
+
+.section-title {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  width: fit-content;
+}
+
+.section-list-title {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: gray;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+}
+
+.section-detail-title {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgb(238, 232, 232);
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+}
+
+.artist-box.selected label.section-title {
+  background-color: #14AE5C;
+  color: white;
+}
+
+.row-list {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.row-list li {
+  flex-basis: calc(25% - 10px);
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
 }
