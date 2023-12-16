@@ -29,7 +29,7 @@ To run the application locally:
 
 ## Contributions and Support
 
-Contributions to the project are welcome! Feel free to submit issues, feature requests, or pull requests. For support or queries, contact [Your Name/Email].
+Contributions to the project are welcome! Feel free to submit issues, feature requests, or pull requests. For support or queries, contact arieldz1325@gmail.com.
 
 ## License
 
